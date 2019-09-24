@@ -10,6 +10,12 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
   heroes: Array<Hero> = HEROES;
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    console.log(hero);
+    this.selectedHero = hero;
+  }
 
   constructor() {}
 
